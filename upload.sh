@@ -1,0 +1,1 @@
+curl -F 'file=@upload.sh' http://localhost:8080/upload
