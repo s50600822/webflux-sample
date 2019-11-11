@@ -41,7 +41,8 @@ public class DemoApplication {
     RouterFunction r() {
         log.info("routing setup");
         return route(
-                GET("/hello"), this::blahUnblocked).andRoute(
+                GET("/blocked"), this::blah).andRoute(
+                GET("/unblocked"), this::blahUnblocked).andRoute(
                 GET("/upload"), req -> ServerResponse.temporaryRedirect(create("/static/upload.html")).build()).andRoute(
                 POST("/upload"), this::upload).andOther(
                 resources("/**", new ClassPathResource("/static"))
