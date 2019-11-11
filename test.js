@@ -3,7 +3,7 @@ const r = require('request-promise-native');
 
 const BLOCKED= 'http://localhost:8080/blocked'
 const UNBLOCKED= 'http://localhost:8080/unblocked'
-const URL = UNBLOCKED
+const URL = BLOCKED
 
 const startTime = new Date();
 
